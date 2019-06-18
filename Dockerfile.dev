@@ -1,6 +1,6 @@
 FROM maven:3.6.1-jdk-8-alpine
 WORKDIR demoApp
-COPY pom .
+COPY pom.xml .
 RUN mvn clean compile;
 COPY . .
 CMD ["mvn", "spring-boot:run"]
