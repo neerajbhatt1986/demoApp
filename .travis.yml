@@ -1,0 +1,5 @@
+services: docker
+before_install:
+  - docker build -t prod-build .
+script:
+  - docker container run -p 8080:8080 prod-build
